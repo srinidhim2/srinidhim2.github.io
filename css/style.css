@@ -637,6 +637,14 @@ pre code {
   margin-right: -15px;
   margin-left: -15px;
 }
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 200px;
+  /* padding-right: 100px; */
+  
+}
 
 .no-gutters {
   margin-right: 0;
