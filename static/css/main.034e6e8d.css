@@ -1,0 +1,2 @@
+body{background:#fafafa;font-family:sans-serif;margin:0}nav{background:#fff;display:flex;gap:20px}.grid,nav{padding:10px}.grid{grid-gap:10px;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}.post img{height:180px;object-fit:cover;width:100%}.upload{background:#fff;border-bottom:1px solid #ddd;padding:10px}
+/*# sourceMappingURL=main.034e6e8d.css.map*/
