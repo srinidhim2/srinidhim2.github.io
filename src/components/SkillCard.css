@@ -1,0 +1,87 @@
+.skills-section {
+  margin-bottom: 48px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-accent {
+  color: #58a6ff;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.skill-category {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 12px;
+  padding: 20px;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-category:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.skill-category-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f0f6fc;
+  margin: 0;
+}
+
+.skill-icon {
+  font-size: 1.3rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: #0d1117;
+  color: #8b949e;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #21262d;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  color: #58a6ff;
+  border-color: #58a6ff;
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category {
+    padding: 16px;
+  }
+}

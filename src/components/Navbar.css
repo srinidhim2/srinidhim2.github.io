@@ -1,0 +1,82 @@
+.navbar {
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo-bracket {
+  color: #58a6ff;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.logo-name {
+  color: #f0f6fc;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #8b949e;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link:hover {
+  color: #f0f6fc;
+  background: #161b22;
+}
+
+.nav-link.active {
+  color: #f0f6fc;
+  background: #21262d;
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-logo {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    gap: 4px;
+  }
+}

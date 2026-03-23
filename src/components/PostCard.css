@@ -1,0 +1,242 @@
+.post-grid-item {
+  position: relative;
+  aspect-ratio: 1;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.post-grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  color: transparent; /* hide alt text during load */
+}
+
+.post-grid-item:hover .post-grid-image {
+  transform: scale(1.05);
+}
+
+.post-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.post-grid-item:hover .post-grid-overlay {
+  opacity: 1;
+}
+
+.post-grid-stats {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  gap: 16px;
+}
+
+/* Multi-photo badge (top-right corner of grid thumb) */
+.post-multi-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 4px;
+  padding: 3px 5px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* Modal */
+.post-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 12px;
+}
+
+.post-modal {
+  background: #161b22;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid #21262d;
+}
+
+.post-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.post-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.post-modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  max-height: 520px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+  color: transparent;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.4; }
+  to   { opacity: 1; }
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: background 0.2s ease;
+  user-select: none;
+  /* Larger invisible tap area on touch */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow.left  { left: 8px; }
+.carousel-arrow.right { right: 8px; }
+
+/* Bigger touch targets on mobile */
+@media (hover: none) {
+  .carousel-arrow {
+    width: 48px;
+    height: 48px;
+    font-size: 2.2rem;
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  .post-grid-overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Dot indicators */
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+/* Counter (top-left) */
+.carousel-counter {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.post-modal-details {
+  padding: 20px;
+}
+
+.post-modal-caption {
+  color: #f0f6fc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.post-modal-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #8b949e;
+  font-size: 0.85rem;
+}
+
+.post-modal-likes {
+  font-weight: 600;
+}

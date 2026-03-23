@@ -1,0 +1,16 @@
+{
+  "name": "Srinidhi M",
+  "username": "srinidhim2",
+  "bio": "Developer Engineer | Backend & AI/ML Enthusiast",
+  "avatar": "/assets/profile/avatar.png",
+  "stats": {
+    "posts": 6,
+    "projects": 3,
+    "followers": 150
+  },
+  "social": {
+    "github": "https://github.com/srinidhim2",
+    "linkedin": "",
+    "twitter": ""
+  }
+}

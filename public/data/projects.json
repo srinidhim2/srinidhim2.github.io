@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "RAG Pipeline",
+    "description": "A Retrieval-Augmented Generation pipeline built with LangChain and FastAPI for intelligent document Q&A.",
+    "image": "/assets/projects/project1.png",
+    "technologies": ["Python", "LangChain", "FastAPI", "Docker"],
+    "github": "https://github.com/srinidhim2/rag-pipeline",
+    "live": "",
+    "date": "2026-01-15"
+  },
+  {
+    "id": 2,
+    "title": "Microservices Platform",
+    "description": "Event-driven microservices architecture using Kafka for real-time data streaming and processing.",
+    "image": "/assets/projects/project2.png",
+    "technologies": ["Node.js", "Kafka", "Docker", "Kubernetes"],
+    "github": "https://github.com/srinidhim2/microservices-platform",
+    "live": "",
+    "date": "2025-11-20"
+  },
+  {
+    "id": 3,
+    "title": "AI Agent Orchestrator",
+    "description": "Multi-agent system using CrewAI and Agent2Agent protocol for automated task execution.",
+    "image": "/assets/projects/project3.png",
+    "technologies": ["Python", "CrewAI", "Agent2Agent", "AWS"],
+    "github": "https://github.com/srinidhim2/ai-agent-orchestrator",
+    "live": "",
+    "date": "2025-09-10"
+  }
+]
